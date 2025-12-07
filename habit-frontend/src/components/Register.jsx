@@ -13,7 +13,7 @@ const Register = () => {
 
     try {
       const res = await axios.post(
-        "https://habit-tracker-kvb3.onrender.com/api/register",
+        `${import.meta.env.VITE_API_URL}/register`,
         { name, email, password }
       )
       console.log(res.data)

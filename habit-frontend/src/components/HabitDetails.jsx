@@ -3,20 +3,28 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../styles/HabitDetails.css";
 
-const API = "https://habit-tracker-kvb3.onrender.com/api";
+const API = import.meta.env.VITE_API_URL;
+
 
 export default function HabitDetails() {
   const { id } = useParams();
   const [habit, setHabit] = useState(null);
   const [logs, setLogs] = useState([]);
 
-  const load = async () => {
-    const h = await axios.get(`${API}/habits/${id}`);
-    setHabit(h.data);
+//   const load = async () => {
+//     const h = await axios.get(`${API}/habits/${id}`);
+//     console.log(h);
+//     setHabit(h.data);
 
-    const l = await axios.get(`${API}/habits/${id}/logs`);
-    setLogs(l.data);
-  };
+//     const l = await axios.get(`${API}/habits/${id}/logs`);
+//     console.log(l);
+//     setLogs(l.data);
+//   };
+
+useEffect(() => {
+  axios.get(`${API}/habits/${id}`).then(res => setHabit(res.data));
+  axios.get(`${API}/habits/${id}/logs`).then(res => setLogs(res.data));
+}, []);
 
   useEffect(() => {
     load();

@@ -55,7 +55,18 @@ res.json({ message: "Logged", streak });
 }
 });
 
-// Get logs for insights
+// Get single habit by ID  
+router.get("/habits/:id", async (req, res) => {
+  try {
+    const habit = await Habit.findById(req.params.id);
+    if (!habit) return res.status(404).json({ error: "Habit not found" });
+    res.json(habit);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Get logs for insights 
 router.get("/habits/:id/logs", async (req, res) => {
   try {
     const logs = await Log.find({ habitId: req.params.id });
@@ -64,6 +75,7 @@ router.get("/habits/:id/logs", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 // Get ALL logs for analytics
 router.get("/all-logs", async (req, res) => {

@@ -10,7 +10,8 @@ import {
 
 import "../styles/Insights.css";
 
-const API = "https://habit-tracker-kvb3.onrender.com/api";
+const API = import.meta.env.VITE_API_URL;
+
 
 export default function Insights() {
   const [habits, setHabits] = useState([]);

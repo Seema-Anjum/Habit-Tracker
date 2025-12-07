@@ -3,20 +3,16 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "../styles/Dashboard.css";
 
-const API = "https://habit-tracker-kvb3.onrender.com/api";
+const API = import.meta.env.VITE_API_URL;
+
 
 export default function Dashboard() {
   const [habits, setHabits] = useState([]);
 
-//   useEffect(() => {
-//     axios.get(`${API}/habits`).then(res => setHabits(res.data));
-//   }, []);
   useEffect(() => {
-  axios.get(`${API}/habits`).then(res => {
-    console.log("API RESPONSE:", res.data);
-    setHabits(res.data);
-  }).catch(err => console.error("ERROR:", err));
-}, []);
+    axios.get(`${API}/habits`).then(res => setHabits(res.data));
+  }, []);
+ 
 
 
   return (

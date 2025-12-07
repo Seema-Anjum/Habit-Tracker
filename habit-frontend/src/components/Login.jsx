@@ -13,7 +13,7 @@ const Login = () => {
 
     try{
       const response = await axios.post(
-        "https://habit-tracker-kvb3.onrender.com/api/login",
+        `${import.meta.env.VITE_API_URL}/login`,
         { email, password }
       )
 
