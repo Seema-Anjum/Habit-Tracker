@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/AddHabit.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://habit-tracker-kvb3.onrender.com/api";
 
 export default function AddHabit() {
   const [title, setTitle] = useState("");

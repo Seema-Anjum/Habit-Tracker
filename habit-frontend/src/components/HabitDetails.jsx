@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../styles/HabitDetails.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://habit-tracker-kvb3.onrender.com/api";
 
 export default function HabitDetails() {
   const { id } = useParams();

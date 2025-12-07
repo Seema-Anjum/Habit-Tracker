@@ -10,7 +10,7 @@ import {
 
 import "../styles/Insights.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://habit-tracker-kvb3.onrender.com/api";
 
 export default function Insights() {
   const [habits, setHabits] = useState([]);

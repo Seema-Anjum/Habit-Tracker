@@ -13,7 +13,7 @@ const Login = () => {
 
     try{
       const response = await axios.post(
-        "http://localhost:5000/api/login",
+        "https://habit-tracker-kvb3.onrender.com/api/login",
         { email, password }
       )
 
