@@ -1,0 +1,64 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  margin: 0;
+  background: #f5f5f5; 
+  font-family: Arial, sans-serif;
+}
+
+.add-habit-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.add-habit-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0; 
+}
+
+.habit-input,
+.habit-select {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.habit-input:focus,
+.habit-select:focus {
+  border-color: #6a5acd;
+  box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.2);
+  outline: none;
+}
+
+.habit-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #6a5acd;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.habit-btn:hover {
+  background: #5948c8;
+}

@@ -1,0 +1,35 @@
+:root {
+  /* Background gradient */
+  --bg-gradient: linear-gradient(180deg, #0E5C73 0%, #0B3E4E 100%);
+
+  /* Core colors */
+  --primary-teal: #0E5C73;
+  --primary-blue: #0B3E4E;
+  --aqua-light: #D6F4F7;
+  --aqua-mid: #9FE7EC;
+  --aqua-dark: #5ABAC5;
+
+  --white: #FFFFFF;
+  --offwhite: #F7F9FA;
+  --gray-light: #E6E9EC;
+  --gray: #9AA1AC;
+  --gray-dark: #4A4F55;
+  --black: #1A1A1A;
+
+  /* UI */
+  --radius: 22px;
+  --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+  /* Glass effect */
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-blur: blur(14px);
+}
+
+/* Global body */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--black);
+}
+

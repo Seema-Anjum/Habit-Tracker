@@ -1,0 +1,72 @@
+@import "./theme.css";
+
+.auth-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-gradient);
+}
+
+.auth-card {
+  width: 350px;
+  padding: 30px;
+  text-align: center;
+  background: var(--gray-dark);
+  color: var(--black);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--gray-light);
+  background: var(--offwhite);
+  color:#000;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary-teal);
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.auth-btn:hover {
+  background: var(--primary-blue);
+}
+
+.switch-text {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: var(--black);
+}
+
+.switch-link {
+  color: var(--aqua-mid);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.switch-link:hover {
+  text-decoration: underline;
+}

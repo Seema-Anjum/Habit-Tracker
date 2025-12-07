@@ -1,0 +1,46 @@
+@import "./theme.css";
+
+
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-gradient);
+}
+
+.auth-card {
+  width: 350px;
+  padding: 30px;
+  text-align: center;
+}
+
+.auth-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.auth-form input {
+  width: 100%;
+  margin-bottom: 15px;
+  background: var(--offwhite);
+}
+
+.auth-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+.switch-text {
+  margin-top: 15px;
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+.switch-link {
+  color: var(--aqua-mid);
+  font-weight: 600;
+}
